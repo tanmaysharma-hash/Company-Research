@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaipur & Remote Job Directory</title>
+    <title>Comprehensive Jaipur & Remote Job Directory</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,9 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+        .company-card {
+            min-height: 250px;
+        }
     </style>
 </head>
 <body class="bg-slate-50">
@@ -21,121 +24,277 @@
         <!-- Header Section -->
         <header class="text-center mb-12">
             <h1 class="text-4xl md:text-5xl font-bold text-slate-800">Jaipur & Remote Job Directory</h1>
-            <p class="text-lg text-slate-600 mt-2">Your guide to top companies and their official application channels.</p>
+            <p class="text-lg text-slate-600 mt-2">Your comprehensive guide to top companies and their official application channels.</p>
         </header>
 
         <!-- Jaipur Section -->
         <section id="jaipur-companies" class="mb-20">
-            <h2 class="text-3xl font-bold text-slate-800 mb-8 text-center border-b-2 border-slate-200 pb-4">Top Companies in Jaipur (On-site & Hybrid)</h2>
+            <h2 class="text-3xl font-bold text-slate-800 mb-2 text-center border-b-2 border-slate-200 pb-4">Top Companies in Jaipur (On-site & Hybrid)</h2>
+            <p class="text-center text-sm text-slate-500 mt-4 mb-8">Includes major corporations and a user-provided list of local IT/MERN stack firms. <br class="hidden sm:block">Please verify contact details and prioritize applying through official websites when available.</p>
             <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                <!-- Existing Jaipur Cards -->
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
+                
+                <!-- Major Corporations in Jaipur -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
                     <div class="flex items-center mb-4"><div class="w-14 h-14 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-2xl">I</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Infosys</h2></div>
                     <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-blue-500"></i><span>IT Services & Consulting</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-blue-500"></i><span>Mahindra World City</span></div></div>
                     <div class="mt-auto"><a href="https://www.infosys.com/careers/apply.html" target="_blank" class="block w-full bg-blue-600 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors">Apply at Official Portal</a></div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
                     <div class="flex items-center mb-4"><div class="w-14 h-14 bg-yellow-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">G</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Genpact</h2></div>
                     <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-yellow-500"></i><span>IT & Business Process Mgt.</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-yellow-500"></i><span>JLN Marg, Malviya Nagar</span></div></div>
                     <div class="mt-auto"><a href="https://www.genpact.com/careers" target="_blank" class="block w-full bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-yellow-600 transition-colors">Apply at Official Portal</a></div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
                     <div class="flex items-center mb-4"><div class="w-14 h-14 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">CD</div><h2 class="text-2xl font-bold text-slate-800 ml-4">CarDekho</h2></div>
                     <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-red-500"></i><span>E-commerce, Auto-Tech</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-red-500"></i><span>Jagatpura, Jaipur</span></div></div>
                     <div class="mt-auto"><a href="https://www.cardekho.com/careers" target="_blank" class="block w-full bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-red-600 transition-colors">Apply at Official Portal</a></div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
                     <div class="flex items-center mb-4"><div class="w-14 h-14 bg-sky-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">HCL</div><h2 class="text-2xl font-bold text-slate-800 ml-4">HCLTech</h2></div>
                     <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-sky-500"></i><span>IT Services & Consulting</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-sky-500"></i><span>Sitapura Industrial Area</span></div></div>
                     <div class="mt-auto"><a href="https://www.hcltech.com/careers/careers-in-india" target="_blank" class="block w-full bg-sky-500 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-sky-600 transition-colors">Apply at Official Portal</a></div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
+
+                <!-- NEWLY ADDED JAIPUR COMPANIES -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-cyan-700 rounded-lg flex items-center justify-center text-white font-bold text-xl">ES</div><h2 class="text-xl font-bold text-slate-800 ml-3">EoxysIT Solution</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-cyan-600"></i><span>MERN Stack Development</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-cyan-600"></i><span>Vaishali Nagar</span></div><div class="flex items-start"><i data-lucide="mail" class="w-4 h-4 mr-2 mt-0.5 text-cyan-600"></i><span>hr@eoxysit.com</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-cyan-600"></i><span>+91-7321873685</span></div></div>
+                    <div class="mt-auto"><a href="https://eoxysit.com/contact/" target="_blank" class="block w-full bg-cyan-700 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-cyan-800 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-amber-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">SD</div><h2 class="text-xl font-bold text-slate-800 ml-3">Start Designs</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-amber-500"></i><span>MERN Stack Development</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-amber-500"></i><span>Jaipur</span></div><div class="flex items-start"><i data-lucide="mail" class="w-4 h-4 mr-2 mt-0.5 text-amber-500"></i><span>hr@startdesigns.com</span></div></div>
+                    <div class="mt-auto"><a href="https://www.startdesigns.com/career/" target="_blank" class="block w-full bg-amber-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-amber-700 transition-colors text-sm">Visit Careers Page</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-rose-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">AD</div><h2 class="text-xl font-bold text-slate-800 ml-3">Arting Digital</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-rose-500"></i><span>MERN Stack Development</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-rose-500"></i><span>Jaipur</span></div><div class="flex items-start"><i data-lucide="mail" class="w-4 h-4 mr-2 mt-0.5 text-rose-500"></i><span>info@artingdigital.com</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-rose-500"></i><span>+91-8427418828</span></div></div>
+                    <div class="mt-auto"><a href="https://www.artingdigital.com/contactUs" target="_blank" class="block w-full bg-rose-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-rose-700 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-slate-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">RS</div><h2 class="text-xl font-bold text-slate-800 ml-3">Regex Software</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-slate-500"></i><span>MERN Training & Internship</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-slate-500"></i><span>Gopalpura Bypass</span></div><div class="flex items-start"><i data-lucide="mail" class="w-4 h-4 mr-2 mt-0.5 text-slate-500"></i><span>info@regexsoftware.com</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-slate-500"></i><span>+91-9602880219</span></div></div>
+                    <div class="mt-auto"><a href="https://www.regexsoftware.com/mern-stack-development-summer-internship-program-2025/" target="_blank" class="block w-full bg-slate-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-slate-700 transition-colors text-sm">View Program</a></div>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-indigo-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">OT</div><h2 class="text-xl font-bold text-slate-800 ml-3">Owebest Tech</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-indigo-400"></i><span>IT Solutions</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-indigo-400"></i><span>Tilak Nagar</span></div><div class="flex items-start"><i data-lucide="mail" class="w-4 h-4 mr-2 mt-0.5 text-indigo-400"></i><span>owebest@gmail.com</span></div></div>
+                    <div class="mt-auto"><a href="https://www.owebest.com/contact-us/" target="_blank" class="block w-full bg-indigo-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-fuchsia-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">AIT</div><h2 class="text-xl font-bold text-slate-800 ml-3">Alea IT</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-fuchsia-500"></i><span>IT Solutions</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-fuchsia-500"></i><span>Tilak Nagar</span></div><div class="flex items-start"><i data-lucide="mail" class="w-4 h-4 mr-2 mt-0.5 text-fuchsia-500"></i><span>support@aleaitsolutions.com</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-fuchsia-500"></i><span>+91-9610365064</span></div></div>
+                    <div class="mt-auto"><a href="https://www.aleaitsolutions.com/" target="_blank" class="block w-full bg-fuchsia-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-fuchsia-700 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-emerald-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">SG</div><h2 class="text-xl font-bold text-slate-800 ml-3">Shri Genesis</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-emerald-500"></i><span>Software Solutions</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-emerald-500"></i><span>Vaishali Nagar</span></div><div class="flex items-start"><i data-lucide="mail" class="w-4 h-4 mr-2 mt-0.5 text-emerald-500"></i><span>info@shrigenesis.com</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-emerald-500"></i><span>+91-9799923531</span></div></div>
+                    <div class="mt-auto"><a href="https://shrigenesis.com/" target="_blank" class="block w-full bg-emerald-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-emerald-700 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-orange-400 rounded-lg flex items-center justify-center text-white font-bold text-xl">MT</div><h2 class="text-xl font-bold text-slate-800 ml-3">MetaBlock Tech</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-orange-300"></i><span>Blockchain & IT</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-orange-300"></i><span>Gopalpura Bypass Rd</span></div><div class="flex items-start"><i data-lucide="mail" class="w-4 h-4 mr-2 mt-0.5 text-orange-300"></i><span>info@metablocktechnologies.com</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-orange-300"></i><span>+91-9358593003</span></div></div>
+                    <div class="mt-auto"><a href="https://metablocktechnologies.com/" target="_blank" class="block w-full bg-orange-400 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-orange-500 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-sky-400 rounded-lg flex items-center justify-center text-white font-bold text-xl">HT</div><h2 class="text-xl font-bold text-slate-800 ml-3">HawksCode</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-sky-300"></i><span>Software & Marketing</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-sky-300"></i><span>Lalkothi</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-sky-300"></i><span>+91-9672304111</span></div></div>
+                    <div class="mt-auto"><a href="https://hawkscode.com/" target="_blank" class="block w-full bg-sky-400 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-sky-500 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-red-400 rounded-lg flex items-center justify-center text-white font-bold text-xl">FS</div><h2 class="text-xl font-bold text-slate-800 ml-3">Fullstack Solutions</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-red-300"></i><span>Web Development</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-red-300"></i><span>Nirman Nagar</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-red-300"></i><span>+91-8107186985</span></div></div>
+                    <div class="mt-auto"><a href="https://fullstacksolution.net/" target="_blank" class="block w-full bg-red-400 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-red-500 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-teal-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">MS</div><h2 class="text-xl font-bold text-slate-800 ml-3">Metacube Software</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-teal-400"></i><span>Software Development</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-teal-400"></i><span>Sitapura Industrial Area</span></div></div>
+                    <div class="mt-auto"><a href="https://www.metacube.com/careers" target="_blank" class="block w-full bg-teal-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-teal-600 transition-colors text-sm">Visit Careers Page</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-green-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">DL</div><h2 class="text-xl font-bold text-slate-800 ml-3">Dotsquares</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-green-400"></i><span>Web & App Development</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-green-400"></i><span>Jaipur</span></div></div>
+                    <div class="mt-auto"><a href="https://www.dotsquares.com/career/" target="_blank" class="block w-full bg-green-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-green-600 transition-colors text-sm">Visit Careers Page</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">DT</div><h2 class="text-xl font-bold text-slate-800 ml-3">Dev Technosys</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-blue-400"></i><span>Software Development</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-blue-400"></i><span>Malviya Nagar</span></div></div>
+                    <div class="mt-auto"><a href="https://www.devtechnosys.com/career" target="_blank" class="block w-full bg-blue-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-blue-600 transition-colors text-sm">Visit Careers Page</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-red-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">TP</div><h2 class="text-xl font-bold text-slate-800 ml-3">Technoloader</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-red-500"></i><span>Blockchain Development</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-red-500"></i><span>Tagore Nagar</span></div></div>
+                    <div class="mt-auto"><a href="https://www.technoloader.com/career" target="_blank" class="block w-full bg-red-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-red-700 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-orange-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">WT</div><h2 class="text-xl font-bold text-slate-800 ml-3">WDP Technologies</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-orange-500"></i><span>Web Development</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-orange-500"></i><span>Jaipur</span></div></div>
+                    <div class="mt-auto"><a href="https://www.wdptechnologies.com/career/" target="_blank" class="block w-full bg-orange-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-orange-700 transition-colors text-sm">Visit Careers Page</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">PT</div><h2 class="text-xl font-bold text-slate-800 ml-3">Protocloud Tech</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-purple-500"></i><span>Web & Mobile Apps</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-purple-500"></i><span>Jaipur</span></div></div>
+                    <div class="mt-auto"><a href="https://protocloudtechnologies.com/career" target="_blank" class="block w-full bg-purple-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-purple-700 transition-colors text-sm">Visit Careers Page</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">AS</div><h2 class="text-xl font-bold text-slate-800 ml-3">Amplework</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-indigo-500"></i><span>AI & App Development</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-indigo-500"></i><span>Jaipur</span></div></div>
+                    <div class="mt-auto"><a href="https://www.amplework.com/career/" target="_blank" class="block w-full bg-indigo-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-indigo-700 transition-colors text-sm">Visit Careers Page</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-cyan-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">CT</div><h2 class="text-xl font-bold text-slate-800 ml-3">Codebird Tech</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-cyan-400"></i><span>Web & App Development</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-cyan-400"></i><span>Jaipur</span></div></div>
+                    <div class="mt-auto"><a href="https://codebirdtechnologies.com/career" target="_blank" class="block w-full bg-cyan-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-cyan-600 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-rose-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">N9</div><h2 class="text-xl font-bold text-slate-800 ml-3">The NineHertz</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-rose-400"></i><span>Software Development</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-rose-400"></i><span>Jaipur</span></div></div>
+                    <div class="mt-auto"><a href="https://theninehertz.com/career" target="_blank" class="block w-full bg-rose-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-rose-600 transition-colors text-sm">Visit Careers Page</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-slate-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">AI</div><h2 class="text-xl font-bold text-slate-800 ml-3">Aryavrat Infotech</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-slate-400"></i><span>Web & App Development</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-slate-400"></i><span>Jaipur</span></div></div>
+                    <div class="mt-auto"><a href="https://www.aryavratinfotech.com/career" target="_blank" class="block w-full bg-slate-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-slate-600 transition-colors text-sm">Visit Careers Page</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-amber-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">KI</div><h2 class="text-xl font-bold text-slate-800 ml-3">Konstant Infosolutions</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-amber-400"></i><span>Mobile App Development</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-amber-400"></i><span>Jaipur</span></div></div>
+                    <div class="mt-auto"><a href="https://www.konstantinfo.com/career.php" target="_blank" class="block w-full bg-amber-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-amber-600 transition-colors text-sm">Visit Careers Page</a></div>
+                </div>
+
+                <!-- Other Major Jaipur Companies -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
                     <div class="flex items-center mb-4"><div class="w-14 h-14 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">AU</div><h2 class="text-2xl font-bold text-slate-800 ml-4">AU Bank</h2></div>
                     <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-orange-500"></i><span>Banking & Finance</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-orange-500"></i><span>Bank House, C-Scheme</span></div></div>
                     <div class="mt-auto"><a href="https://www.aubank.in/careers" target="_blank" class="block w-full bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-orange-600 transition-colors">Apply at Official Portal</a></div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-gray-700 rounded-lg flex items-center justify-center text-white font-bold text-2xl">NBC</div><h2 class="text-2xl font-bold text-slate-800 ml-4">NBC Bearings</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-gray-600"></i><span>Manufacturing</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-gray-600"></i><span>Khatipura Road, Jaipur</span></div></div>
-                    <div class="mt-auto"><a href="https://nbcbearings.com/careers/" target="_blank" class="block w-full bg-gray-700 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-gray-800 transition-colors">Apply at Official Portal</a></div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-2xl">VG</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Vaibhav Global</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-purple-500"></i><span>E-commerce, Jewelry</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-purple-500"></i><span>Sitapura Industrial Area</span></div></div>
-                    <div class="mt-auto"><a href="https://www.vaibhavglobal.com/careers/" target="_blank" class="block w-full bg-purple-600 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-purple-700 transition-colors">Apply at Official Portal</a></div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
                     <div class="flex items-center mb-4"><div class="w-14 h-14 bg-cyan-600 rounded-lg flex items-center justify-center text-white font-bold text-2xl">DB</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Deutsche Bank</h2></div>
                     <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-cyan-500"></i><span>Banking & Financial Services</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-cyan-500"></i><span>Mahindra World City</span></div></div>
                     <div class="mt-auto"><a href="https://careers.db.com/" target="_blank" class="block w-full bg-cyan-600 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-cyan-700 transition-colors">Apply at Official Portal</a></div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-teal-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">M</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Metacube</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-teal-500"></i><span>IT Services (Software)</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-teal-500"></i><span>Sitapura Industrial Area</span></div></div>
-                    <div class="mt-auto"><a href="https://www.metacube.com/careers" target="_blank" class="block w-full bg-teal-500 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-teal-600 transition-colors">Apply at Official Portal</a></div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-2xl">TM</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Tech Mahindra</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-indigo-500"></i><span>IT Services</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-indigo-500"></i><span>Mahindra World City</span></div></div>
-                    <div class="mt-auto"><a href="https://careers.techmahindra.com/" target="_blank" class="block w-full bg-indigo-600 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-indigo-700 transition-colors">Apply at Official Portal</a></div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-blue-800 rounded-lg flex items-center justify-center text-white font-bold text-2xl">W</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Wipro</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-blue-800"></i><span>IT & Consulting</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-blue-800"></i><span>Mahindra World City</span></div></div>
-                    <div class="mt-auto"><a href="https://careers.wipro.com/" target="_blank" class="block w-full bg-blue-800 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-blue-900 transition-colors">Apply at Official Portal</a></div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-amber-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">JCB</div><h2 class="text-2xl font-bold text-slate-800 ml-4">JCB India</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-amber-500"></i><span>Heavy Equipment Mfg.</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-amber-500"></i><span>Mahindra World City</span></div></div>
-                    <div class="mt-auto"><a href="https://www.jcb.com/en-in/careers" target="_blank" class="block w-full bg-amber-500 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-amber-600 transition-colors">Apply at Official Portal</a></div>
-                </div>
-                <!-- 100+ Jaipur Companies -->
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-red-600 rounded-lg flex items-center justify-center text-white font-bold text-2xl">A</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Accenture</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-red-600"></i><span>IT & Consulting</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-red-600"></i><span>Sitapura</span></div></div>
-                    <div class="mt-auto"><a href="https://www.accenture.com/in-en/careers" target="_blank" class="block w-full bg-red-600 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-red-700 transition-colors">Apply at Official Portal</a></div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-green-600 rounded-lg flex items-center justify-center text-white font-bold text-2xl">C</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Capgemini</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-green-600"></i><span>IT Services</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-green-600"></i><span>Mahindra World City</span></div></div>
-                    <div class="mt-auto"><a href="https://www.capgemini.com/in-en/careers/" target="_blank" class="block w-full bg-green-600 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-green-700 transition-colors">Apply at Official Portal</a></div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
                     <div class="flex items-center mb-4"><div class="w-14 h-14 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">IB</div><h2 class="text-2xl font-bold text-slate-800 ml-4">ICICI Bank</h2></div>
                     <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-blue-500"></i><span>Banking</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-blue-500"></i><span>Multiple Branches</span></div></div>
                     <div class="mt-auto"><a href="https://www.icicicareers.com/" target="_blank" class="block w-full bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-blue-600 transition-colors">Apply at Official Portal</a></div>
                 </div>
-                 <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
+                 <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
                     <div class="flex items-center mb-4"><div class="w-14 h-14 bg-red-700 rounded-lg flex items-center justify-center text-white font-bold text-2xl">HB</div><h2 class="text-2xl font-bold text-slate-800 ml-4">HDFC Bank</h2></div>
                     <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-red-700"></i><span>Banking</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-red-700"></i><span>Multiple Branches</span></div></div>
                     <div class="mt-auto"><a href="https://www.hdfcbank.com/careers" target="_blank" class="block w-full bg-red-700 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-red-800 transition-colors">Apply at Official Portal</a></div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
                     <div class="flex items-center mb-4"><div class="w-14 h-14 bg-purple-800 rounded-lg flex items-center justify-center text-white font-bold text-2xl">AB</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Axis Bank</h2></div>
                     <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-purple-800"></i><span>Banking</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-purple-800"></i><span>Multiple Branches</span></div></div>
                     <div class="mt-auto"><a href="https://www.axisbank.com/careers" target="_blank" class="block w-full bg-purple-800 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-purple-900 transition-colors">Apply at Official Portal</a></div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
                     <div class="flex items-center mb-4"><div class="w-14 h-14 bg-gray-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">B</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Bosch</h2></div>
                     <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-gray-500"></i><span>Automotive & Engg.</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-gray-500"></i><span>Sitapura Industrial Area</span></div></div>
                     <div class="mt-auto"><a href="https://www.bosch.in/careers/" target="_blank" class="block w-full bg-gray-500 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-gray-600 transition-colors">Apply at Official Portal</a></div>
                 </div>
-                 <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-blue-900 rounded-lg flex items-center justify-center text-white font-bold text-2xl">LT</div><h2 class="text-2xl font-bold text-slate-800 ml-4">L&T Infotech</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-blue-900"></i><span>IT Services</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-blue-900"></i><span>Mahindra World City</span></div></div>
-                    <div class="mt-auto"><a href="https://www.ltts.com/careers" target="_blank" class="block w-full bg-blue-900 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-blue-950 transition-colors">Apply at Official Portal</a></div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center text-white font-bold text-2xl">HM</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Hero MotoCorp</h2></div>
+                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-slate-700"></i><span>Automotive</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-slate-700"></i><span>Regional Office</span></div></div>
+                    <div class="mt-auto"><a href="https://www.heromotocorp.com/en-in/careers/" target="_blank" class="block w-full bg-slate-800 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-slate-900 transition-colors">Apply at Official Portal</a></div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-green-700 rounded-lg flex items-center justify-center text-white font-bold text-2xl">A</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Appirio</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-green-700"></i><span>IT Consulting (Wipro)</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-green-700"></i><span>Mahindra World City</span></div></div>
-                    <div class="mt-auto"><a href="https://www.appirio.com/careers" target="_blank" class="block w-full bg-green-700 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-green-800 transition-colors">Apply at Official Portal</a></div>
+
+                <!-- Additional Jaipur Companies from the list -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-blue-400 rounded-lg flex items-center justify-center text-white font-bold text-xl">CZ</div><h2 class="text-xl font-bold text-slate-800 ml-3">Codezion Softwares</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-blue-300"></i><span>Software, Marketing, Website design</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-blue-300"></i><span>Tilak Nagar</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-blue-300"></i><span>+91-8386893777</span></div></div>
+                    <div class="mt-auto"><a href="https://codezion.com" target="_blank" class="block w-full bg-blue-400 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-blue-500 transition-colors text-sm">Visit Website</a></div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-red-800 rounded-lg flex items-center justify-center text-white font-bold text-2xl">N</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Nagarro</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-red-800"></i><span>Digital Engineering</span></div><div class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-red-800"></i><span>Malviya Nagar</span></div></div>
-                    <div class="mt-auto"><a href="https://www.nagarro.com/en/careers" target="_blank" class="block w-full bg-red-800 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-red-900 transition-colors">Apply at Official Portal</a></div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-green-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">M2N</div><h2 class="text-xl font-bold text-slate-800 ml-3">M2N Software</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-green-400"></i><span>Software Development</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-green-400"></i><span>Sodala</span></div></div>
+                    <div class="mt-auto"><a href="https://m2nittech.com" target="_blank" class="block w-full bg-green-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-green-600 transition-colors text-sm">Visit Website</a></div>
                 </div>
-                 <!-- ... Add more Jaipur company cards here ... -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-purple-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">CP</div><h2 class="text-xl font-bold text-slate-800 ml-3">Code Planet</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-purple-400"></i><span>Software, Website design</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-purple-400"></i><span>Pratap Nagar</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-purple-400"></i><span>+91-8619130803</span></div></div>
+                    <div class="mt-auto"><a href="http://www.codeplanet.co.in" target="_blank" class="block w-full bg-purple-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-purple-600 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-teal-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">WN</div><h2 class="text-xl font-bold text-slate-800 ml-3">WebNStack</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-teal-400"></i><span>Software Development</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-teal-400"></i><span>Heera Nagar</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-teal-400"></i><span>+91-8905599339</span></div></div>
+                    <div class="mt-auto"><a href="https://webnstack.com" target="_blank" class="block w-full bg-teal-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-teal-600 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-amber-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">CS</div><h2 class="text-xl font-bold text-slate-800 ml-3">Codespur</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-amber-400"></i><span>Software, Web, Marketing</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-amber-400"></i><span>Vaishali Nagar</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-amber-400"></i><span>+91-9950448844</span></div></div>
+                    <div class="mt-auto"><a href="http://www.codespur.com" target="_blank" class="block w-full bg-amber-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-amber-600 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">AI</div><h2 class="text-xl font-bold text-slate-800 ml-3">Aamod IT Solutions</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-red-400"></i><span>Software, Web, Computer support</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-red-400"></i><span>Ashok Nagar</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-red-400"></i><span>+91-8562053970</span></div></div>
+                    <div class="mt-auto"><a href="http://www.aamoditsolutions.com" target="_blank" class="block w-full bg-red-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-red-600 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-indigo-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">DI</div><h2 class="text-xl font-bold text-slate-800 ml-3">Dev Information</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-indigo-400"></i><span>Software Development</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-indigo-400"></i><span>Ajmer Road</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-indigo-400"></i><span>+91-9429899852</span></div></div>
+                    <div class="mt-auto"><a href="https://www.devitpl.com" target="_blank" class="block w-full bg-indigo-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-pink-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">TB</div><h2 class="text-xl font-bold text-slate-800 ml-3">Techhnnessine</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-pink-400"></i><span>Software, training, hosting</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-pink-400"></i><span>Sindhi Camp</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-pink-400"></i><span>+91-9928780101</span></div></div>
+                    <div class="mt-auto"><a href="http://www.techhnnessine.com" target="_blank" class="block w-full bg-pink-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-pink-600 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">FL</div><h2 class="text-xl font-bold text-slate-800 ml-3">Full Stack Learning</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-blue-500"></i><span>Software training, Coaching</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-blue-500"></i><span>Gopalpura Bypass</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-blue-500"></i><span>+91-8824453320</span></div></div>
+                    <div class="mt-auto"><a href="https://fullstacklearning.com" target="_blank" class="block w-full bg-blue-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-blue-700 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-green-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">MS</div><h2 class="text-xl font-bold text-slate-800 ml-3">Modern Software Tech</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-green-500"></i><span>Software, Computer support</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-green-500"></i><span>Bais Godam</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-green-500"></i><span>+91-8824587052</span></div></div>
+                    <div class="mt-auto"><a href="https://modernsoftwaretechnologies.com" target="_blank" class="block w-full bg-green-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-green-700 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">SE</div><h2 class="text-xl font-bold text-slate-800 ml-3">StackEarn</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-purple-500"></i><span>Software, training</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-purple-500"></i><span>Sanganer</span></div></div>
+                    <div class="mt-auto"><a href="https://stackearn.com" target="_blank" class="block w-full bg-purple-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-purple-700 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-orange-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">KP</div><h2 class="text-xl font-bold text-slate-800 ml-3">Krishna Padam IT</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-orange-500"></i><span>Software Development</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-orange-500"></i><span>Vaishali Nagar</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-orange-500"></i><span>+91-6350359218</span></div></div>
+                    <div class="mt-auto"><a href="https://www.kpis.in" target="_blank" class="block w-full bg-orange-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-orange-700 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-teal-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">ZI</div><h2 class="text-xl font-bold text-slate-800 ml-3">Zentek Infosoft</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-teal-500"></i><span>Computer support, HR consulting</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-teal-500"></i><span>Ajmer Road</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-teal-500"></i><span>+91-9829026398</span></div></div>
+                    <div class="mt-auto"><a href="https://zentekinfosoft.com" target="_blank" class="block w-full bg-teal-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-teal-700 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-pink-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">MS</div><h2 class="text-xl font-bold text-slate-800 ml-3">Moonstack</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-pink-500"></i><span>Web/Mobile/Ecomm design</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-pink-500"></i><span>Vaishali Nagar</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-pink-500"></i><span>+91-9772009900</span></div></div>
+                    <div class="mt-auto"><a href="https://moonstack.co" target="_blank" class="block w-full bg-pink-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-pink-700 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-blue-700 rounded-lg flex items-center justify-center text-white font-bold text-xl">RN</div><h2 class="text-xl font-bold text-slate-800 ml-3">We RNS IT Solutions</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-blue-600"></i><span>IT Solutions, Computer support</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-blue-600"></i><span>Vaishali Nagar</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-blue-600"></i><span>+91-7020609101</span></div></div>
+                    <div class="mt-auto"><a href="https://globalrns.com" target="_blank" class="block w-full bg-blue-700 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-blue-800 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-red-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">WG</div><h2 class="text-xl font-bold text-slate-800 ml-3">WebGenesis</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-red-500"></i><span>Software Development</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-red-500"></i><span>Sodala</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-red-500"></i><span>+91-8005853769</span></div></div>
+                    <div class="mt-auto"><a href="https://www.webgenesis.in" target="_blank" class="block w-full bg-red-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-red-700 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-green-700 rounded-lg flex items-center justify-center text-white font-bold text-xl">SW</div><h2 class="text-xl font-bold text-slate-800 ml-3">Sowere Technologies</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-green-600"></i><span>Software, Marketing, Training</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-green-600"></i><span>Sodala</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-green-600"></i><span>+91-9001917565</span></div></div>
+                    <div class="mt-auto"><a href="https://sowere.in" target="_blank" class="block w-full bg-green-700 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-green-800 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-purple-700 rounded-lg flex items-center justify-center text-white font-bold text-xl">PI</div><h2 class="text-xl font-bold text-slate-800 ml-3">Priyam Infosystems</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-purple-600"></i><span>Software, Consulting</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-purple-600"></i><span>Ashok Nagar</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-purple-600"></i><span>+91-141-4005009</span></div></div>
+                    <div class="mt-auto"><a href="http://www.priyaminfosystems.com" target="_blank" class="block w-full bg-purple-700 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-purple-800 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-blue-800 rounded-lg flex items-center justify-center text-white font-bold text-xl">IG</div><h2 class="text-xl font-bold text-slate-800 ml-3">IMG Global Infotech</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-blue-700"></i><span>Software, E-commerce, Web Design</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-blue-700"></i><span>Nirman Nagar</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-blue-700"></i><span>+91-9694097244</span></div></div>
+                    <div class="mt-auto"><a href="https://www.imgglobalinfotech.com" target="_blank" class="block w-full bg-blue-800 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-blue-900 transition-colors text-sm">Visit Website</a></div>
+                </div>
 
             </main>
         </section>
@@ -144,101 +303,181 @@
         <section id="remote-companies">
             <h2 class="text-3xl font-bold text-slate-800 mb-8 text-center border-b-2 border-slate-200 pb-4">Top Companies for Remote Work (India-wide)</h2>
             <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                <!-- Existing Remote Company Cards -->
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
                     <div class="flex items-center mb-4"><div class="w-14 h-14 bg-gray-800 rounded-lg flex items-center justify-center text-white font-bold text-2xl">A</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Atlassian</h2></div>
                     <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-gray-800"></i><span>Software (Jira, Confluence)</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-gray-800"></i><span>Remote First</span></div></div>
                     <div class="mt-auto"><a href="https://www.atlassian.com/company/careers" target="_blank" class="block w-full bg-gray-800 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-gray-900 transition-colors">View Remote Roles</a></div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">R</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Razorpay</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-blue-500"></i><span>Fintech</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-blue-500"></i><span>Remote Friendly</span></div></div>
-                    <div class="mt-auto"><a href="https://razorpay.com/careers/" target="_blank" class="block w-full bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-blue-600 transition-colors">View Remote Roles</a></div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-green-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">G</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Groww</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-green-500"></i><span>Fintech (Investing)</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-green-500"></i><span>Remote Friendly</span></div></div>
-                    <div class="mt-auto"><a href="https://groww.in/careers" target="_blank" class="block w-full bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-green-600 transition-colors">View Remote Roles</a></div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
+                 <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
                     <div class="flex items-center mb-4"><div class="w-14 h-14 bg-sky-600 rounded-lg flex items-center justify-center text-white font-bold text-2xl">Z</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Zerodha</h2></div>
                     <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-sky-600"></i><span>Fintech (Stockbroking)</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-sky-600"></i><span>Permanent Remote</span></div></div>
                     <div class="mt-auto"><a href="https://zerodha.com/careers/" target="_blank" class="block w-full bg-sky-600 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-sky-700 transition-colors">View Remote Roles</a></div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-orange-600 rounded-lg flex items-center justify-center text-white font-bold text-2xl">S</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Swiggy</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-orange-600"></i><span>Food & Grocery Delivery</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-orange-600"></i><span>Remote Friendly</span></div></div>
-                    <div class="mt-auto"><a href="https://careers.swiggy.com/" target="_blank" class="block w-full bg-orange-600 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-orange-700 transition-colors">View Remote Roles</a></div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-rose-600 rounded-lg flex items-center justify-center text-white font-bold text-2xl">Z</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Zomato</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-rose-600"></i><span>Food Delivery</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-rose-600"></i><span>Remote Friendly</span></div></div>
-                    <div class="mt-auto"><a href="https://www.zomato.com/careers" target="_blank" class="block w-full bg-rose-600 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-rose-700 transition-colors">View Remote Roles</a></div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-black rounded-lg flex items-center justify-center text-white font-bold text-2xl">Cr</div><h2 class="text-2xl font-bold text-slate-800 ml-4">CRED</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-black"></i><span>Fintech</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-black"></i><span>Remote Friendly</span></div></div>
-                    <div class="mt-auto"><a href="https://cred.club/careers" target="_blank" class="block w-full bg-black text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-gray-800 transition-colors">View Remote Roles</a></div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-purple-700 rounded-lg flex items-center justify-center text-white font-bold text-2xl">P</div><h2 class="text-2xl font-bold text-slate-800 ml-4">PhonePe</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-purple-700"></i><span>Fintech (Payments)</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-purple-700"></i><span>Remote Friendly</span></div></div>
-                    <div class="mt-auto"><a href="https://www.phonepe.com/careers/" target="_blank" class="block w-full bg-purple-700 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-purple-800 transition-colors">View Remote Roles</a></div>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
                     <div class="flex items-center mb-4"><div class="w-14 h-14 bg-pink-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">M</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Meesho</h2></div>
                     <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-pink-500"></i><span>E-commerce</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-pink-500"></i><span>Remote First</span></div></div>
                     <div class="mt-auto"><a href="https://www.meesho.io/careers" target="_blank" class="block w-full bg-pink-500 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-pink-600 transition-colors">View Remote Roles</a></div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-red-600 rounded-lg flex items-center justify-center text-white font-bold text-2xl">A</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Accenture</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-red-600"></i><span>IT & Consulting</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-red-600"></i><span>Offers Remote Roles</span></div></div>
-                    <div class="mt-auto"><a href="https://www.accenture.com/in-en/careers" target="_blank" class="block w-full bg-red-600 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-red-700 transition-colors">View Remote Roles</a></div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-purple-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">G</div><h2 class="text-2xl font-bold text-slate-800 ml-4">GitLab</h2></div>
+                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-purple-500"></i><span>DevOps Platform</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-purple-500"></i><span>All-Remote</span></div></div>
+                    <div class="mt-auto"><a href="https://about.gitlab.com/jobs/" target="_blank" class="block w-full bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-purple-600 transition-colors">View Remote Roles</a></div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-blue-700 rounded-lg flex items-center justify-center text-white font-bold text-2xl">TCS</div><h2 class="text-2xl font-bold text-slate-800 ml-4">TCS</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-blue-700"></i><span>IT Services & Consulting</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-blue-700"></i><span>Offers Remote Roles</span></div></div>
-                    <div class="mt-auto"><a href="https://www.tcs.com/careers" target="_blank" class="block w-full bg-blue-700 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-blue-800 transition-colors">View Remote Roles</a></div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">R</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Razorpay</h2></div>
+                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-blue-500"></i><span>Fintech</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-blue-500"></i><span>Remote Friendly</span></div></div>
+                    <div class="mt-auto"><a href="https://razorpay.com/careers/" target="_blank" class="block w-full bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-blue-600 transition-colors">View Remote Roles</a></div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-blue-400 rounded-lg flex items-center justify-center text-white font-bold text-2xl">MS</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Microsoft</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-blue-400"></i><span>Software & Cloud</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-blue-400"></i><span>Offers Remote Roles</span></div></div>
-                    <div class="mt-auto"><a href="https://careers.microsoft.com/" target="_blank" class="block w-full bg-blue-400 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-blue-500 transition-colors">View Remote Roles</a></div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-green-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">G</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Groww</h2></div>
+                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-green-500"></i><span>Fintech (Investing)</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-green-500"></i><span>Remote Friendly</span></div></div>
+                    <div class="mt-auto"><a href="https://groww.in/careers" target="_blank" class="block w-full bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-green-600 transition-colors">View Remote Roles</a></div>
                 </div>
-                 <!-- 100+ Remote Company Cards -->
-                 <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">G</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Google</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-orange-500"></i><span>Software & Search</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-orange-500"></i><span>Hybrid & Remote</span></div></div>
-                    <div class="mt-auto"><a href="https://careers.google.com/" target="_blank" class="block w-full bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-orange-600 transition-colors">View Remote Roles</a></div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-black rounded-lg flex items-center justify-center text-white font-bold text-2xl">Cr</div><h2 class="text-2xl font-bold text-slate-800 ml-4">CRED</h2></div>
+                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-black"></i><span>Fintech</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-black"></i><span>Remote Friendly</span></div></div>
+                    <div class="mt-auto"><a href="https://cred.club/careers" target="_blank" class="block w-full bg-black text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-gray-800 transition-colors">View Remote Roles</a></div>
                 </div>
-                 <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
-                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-amber-600 rounded-lg flex items-center justify-center text-white font-bold text-2xl">A</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Amazon</h2></div>
-                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-amber-600"></i><span>E-commerce & Cloud</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-amber-600"></i><span>Offers Remote Roles</span></div></div>
-                    <div class="mt-auto"><a href="https://www.amazon.jobs/" target="_blank" class="block w-full bg-amber-600 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-amber-700 transition-colors">View Remote Roles</a></div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-purple-700 rounded-lg flex items-center justify-center text-white font-bold text-2xl">P</div><h2 class="text-2xl font-bold text-slate-800 ml-4">PhonePe</h2></div>
+                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-purple-700"></i><span>Fintech (Payments)</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-purple-700"></i><span>Remote Friendly</span></div></div>
+                    <div class="mt-auto"><a href="https://www.phonepe.com/careers/" target="_blank" class="block w-full bg-purple-700 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-purple-800 transition-colors">View Remote Roles</a></div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
+                 <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
                     <div class="flex items-center mb-4"><div class="w-14 h-14 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">Z</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Zoho</h2></div>
                     <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-red-500"></i><span>SaaS & Business Software</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-red-500"></i><span>Remote Friendly</span></div></div>
                     <div class="mt-auto"><a href="https://www.zoho.com/careers/" target="_blank" class="block w-full bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-red-600 transition-colors">View Remote Roles</a></div>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300">
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
                     <div class="flex items-center mb-4"><div class="w-14 h-14 bg-green-600 rounded-lg flex items-center justify-center text-white font-bold text-2xl">F</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Freshworks</h2></div>
                     <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-green-600"></i><span>SaaS</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-green-600"></i><span>Remote Friendly</span></div></div>
                     <div class="mt-auto"><a href="https://www.freshworks.com/company/careers/" target="_blank" class="block w-full bg-green-600 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-green-700 transition-colors">View Remote Roles</a></div>
                 </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">P</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Postman</h2></div>
+                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-orange-500"></i><span>API Platform</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-orange-500"></i><span>Remote First</span></div></div>
+                    <div class="mt-auto"><a href="https://www.postman.com/careers/" target="_blank" class="block w-full bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-orange-600 transition-colors">View Remote Roles</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-slate-700 rounded-lg flex items-center justify-center text-white font-bold text-2xl">B</div><h2 class="text-2xl font-bold text-slate-800 ml-4">BrowserStack</h2></div>
+                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-slate-700"></i><span>Cloud Testing Platform</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-slate-700"></i><span>Remote First</span></div></div>
+                    <div class="mt-auto"><a href="https://www.browserstack.com/careers" target="_blank" class="block w-full bg-slate-700 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-slate-800 transition-colors">View Remote Roles</a></div>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">G</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Google</h2></div>
+                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-orange-500"></i><span>Software & Search</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-orange-500"></i><span>Hybrid & Remote</span></div></div>
+                    <div class="mt-auto"><a href="https://careers.google.com/" target="_blank" class="block w-full bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-orange-600 transition-colors">View Remote Roles</a></div>
+                </div>
+                 <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-amber-600 rounded-lg flex items-center justify-center text-white font-bold text-2xl">A</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Amazon</h2></div>
+                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-amber-600"></i><span>E-commerce & Cloud</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-amber-600"></i><span>Offers Remote Roles</span></div></div>
+                    <div class="mt-auto"><a href="https://www.amazon.jobs/" target="_blank" class="block w-full bg-amber-600 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-amber-700 transition-colors">View Remote Roles</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-blue-400 rounded-lg flex items-center justify-center text-white font-bold text-2xl">MS</div><h2 class="text-2xl font-bold text-slate-800 ml-4">Microsoft</h2></div>
+                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-blue-400"></i><span>Software & Cloud</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-blue-400"></i><span>Offers Remote Roles</span></div></div>
+                    <div class="mt-auto"><a href="https://careers.microsoft.com/" target="_blank" class="block w-full bg-blue-400 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-blue-500 transition-colors">View Remote Roles</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-blue-700 rounded-lg flex items-center justify-center text-white font-bold text-2xl">TCS</div><h2 class="text-2xl font-bold text-slate-800 ml-4">TCS</h2></div>
+                    <div class="space-y-3 text-slate-600 mb-6"><div class="flex items-center"><i data-lucide="briefcase" class="w-5 h-5 mr-3 text-blue-700"></i><span>IT Services & Consulting</span></div><div class="flex items-center"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-blue-700"></i><span>Offers Remote Roles</span></div></div>
+                    <div class="mt-auto"><a href="https://www.tcs.com/careers" target="_blank" class="block w-full bg-blue-700 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-blue-800 transition-colors">View Remote Roles</a></div>
+                </div>
+
+                <!-- Additional Remote Companies from the list -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-teal-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">CN</div><h2 class="text-xl font-bold text-slate-800 ml-3">Capital Numbers</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-teal-400"></i><span>IT Services</span></div><div class="flex items-start"><i data-lucide="globe-2" class="w-4 h-4 mr-2 mt-0.5 text-teal-400"></i><span>Remote Friendly</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-teal-400"></i><span>Kolkata</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-teal-400"></i><span>+91-33-67992222</span></div></div>
+                    <div class="mt-auto"><a href="https://www.capitalnumbers.com/careers.php" target="_blank" class="block w-full bg-teal-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-teal-600 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-purple-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">SK</div><h2 class="text-xl font-bold text-slate-800 ml-3">Sweken IT</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-purple-400"></i><span>IT Solutions</span></div><div class="flex items-start"><i data-lucide="globe-2" class="w-4 h-4 mr-2 mt-0.5 text-purple-400"></i><span>Remote Friendly</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-purple-400"></i><span>Visakhapatnam</span></div><div class="flex items-start"><i data-lucide="mail" class="w-4 h-4 mr-2 mt-0.5 text-purple-400"></i><span>info@sweken.com</span></div></div>
+                    <div class="mt-auto"><a href="https://sweken.com/career" target="_blank" class="block w-full bg-purple-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-purple-600 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">T5</div><h2 class="text-xl font-bold text-slate-800 ml-3">Tier5 Tech</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-orange-400"></i><span>Technology Solutions</span></div><div class="flex items-start"><i data-lucide="globe-2" class="w-4 h-4 mr-2 mt-0.5 text-orange-400"></i><span>Remote Friendly</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-orange-400"></i><span>Kolkata</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-orange-400"></i><span>+91-3340723046</span></div></div>
+                    <div class="mt-auto"><a href="https://www.tier5.us" target="_blank" class="block w-full bg-orange-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-orange-600 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">VN</div><h2 class="text-xl font-bold text-slate-800 ml-3">Vanilla Networks</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-blue-400"></i><span>Networking Solutions</span></div><div class="flex items-start"><i data-lucide="globe-2" class="w-4 h-4 mr-2 mt-0.5 text-blue-400"></i><span>Remote Friendly</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-blue-400"></i><span>Kerala</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-blue-400"></i><span>+91-4954060308</span></div></div>
+                    <div class="mt-auto"><a href="https://vanillanetworks.com/careers" target="_blank" class="block w-full bg-blue-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-blue-600 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-green-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">DT</div><h2 class="text-xl font-bold text-slate-800 ml-3">Destm Technologies</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-green-400"></i><span>Technology Solutions</span></div><div class="flex items-start"><i data-lucide="globe-2" class="w-4 h-4 mr-2 mt-0.5 text-green-400"></i><span>Remote Friendly</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-green-400"></i><span>Mohali</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-green-400"></i><span>+91-1724650398</span></div></div>
+                    <div class="mt-auto"><a href="https://destm.com" target="_blank" class="block w-full bg-green-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-green-600 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">KS</div><h2 class="text-xl font-bold text-slate-800 ml-3">Krash IT Services</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-red-400"></i><span>IT Services</span></div><div class="flex items-start"><i data-lucide="globe-2" class="w-4 h-4 mr-2 mt-0.5 text-red-400"></i><span>Remote Friendly</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-red-400"></i><span>Ghaziabad</span></div><div class="flex items-start"><i data-lucide="mail" class="w-4 h-4 mr-2 mt-0.5 text-red-400"></i><span>info@krashitservices.com</span></div></div>
+                    <div class="mt-auto"><a href="https://krashitservices.com" target="_blank" class="block w-full bg-red-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-red-600 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-indigo-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">GX</div><h2 class="text-xl font-bold text-slate-800 ml-3">GARIOXTECH</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-indigo-400"></i><span>Technology Solutions</span></div><div class="flex items-start"><i data-lucide="globe-2" class="w-4 h-4 mr-2 mt-0.5 text-indigo-400"></i><span>Remote Friendly</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-indigo-400"></i><span>Delhi</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-indigo-400"></i><span>+91-8800969918</span></div></div>
+                    <div class="mt-auto"><a href="https://garioxtech.com" target="_blank" class="block w-full bg-indigo-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-indigo-600 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-teal-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">CC</div><h2 class="text-xl font-bold text-slate-800 ml-3">Calanjiyam</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-teal-500"></i><span>Consulting & Tech</span></div><div class="flex items-start"><i data-lucide="globe-2" class="w-4 h-4 mr-2 mt-0.5 text-teal-500"></i><span>Remote Friendly</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-teal-500"></i><span>Erode</span></div><div class="flex items-start"><i data-lucide="mail" class="w-4 h-4 mr-2 mt-0.5 text-teal-500"></i><span>admin@calanjiyam.com</span></div></div>
+                    <div class="mt-auto"><a href="https://calanjiyam.com" target="_blank" class="block w-full bg-teal-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-teal-700 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">MC</div><h2 class="text-xl font-bold text-slate-800 ml-3">MiClient</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-purple-500"></i><span>Client Solutions</span></div><div class="flex items-start"><i data-lucide="globe-2" class="w-4 h-4 mr-2 mt-0.5 text-purple-500"></i><span>Remote Friendly</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-purple-500"></i><span>Gurgaon</span></div></div>
+                    <div class="mt-auto"><a href="https://miclient.in" target="_blank" class="block w-full bg-purple-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-purple-700 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-orange-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">TL</div><h2 class="text-xl font-bold text-slate-800 ml-3">Troopr Labs</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-orange-500"></i><span>AI Technology</span></div><div class="flex items-start"><i data-lucide="globe-2" class="w-4 h-4 mr-2 mt-0.5 text-orange-500"></i><span>Remote Friendly</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-orange-500"></i><span>Bangalore</span></div><div class="flex items-start"><i data-lucide="mail" class="w-4 h-4 mr-2 mt-0.5 text-orange-500"></i><span>support@troopr.ai</span></div></div>
+                    <div class="mt-auto"><a href="https://troopr.ai" target="_blank" class="block w-full bg-orange-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-orange-700 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">DB</div><h2 class="text-xl font-bold text-slate-800 ml-3">Daves Brother</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-blue-500"></i><span>Technology Solutions</span></div><div class="flex items-start"><i data-lucide="globe-2" class="w-4 h-4 mr-2 mt-0.5 text-blue-500"></i><span>Remote Friendly</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-blue-500"></i><span>Indore/Jabalpur</span></div></div>
+                    <div class="mt-auto"><a href="https://davesbrother.com" target="_blank" class="block w-full bg-blue-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-blue-700 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-green-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">SC</div><h2 class="text-xl font-bold text-slate-800 ml-3">Super Cluster</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-green-500"></i><span>Technology Solutions</span></div><div class="flex items-start"><i data-lucide="globe-2" class="w-4 h-4 mr-2 mt-0.5 text-green-500"></i><span>Remote Friendly</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-green-500"></i><span>Coimbatore</span></div><div class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-0.5 text-green-500"></i><span>+91-9853160160</span></div></div>
+                    <div class="mt-auto"><a href="https://superclusterpi.com" target="_blank" class="block w-full bg-green-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-green-700 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">BP</div><h2 class="text-xl font-bold text-slate-800 ml-3">Bizplus4u</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-purple-500"></i><span>Business Solutions</span></div><div class="flex items-start"><i data-lucide="globe-2" class="w-4 h-4 mr-2 mt-0.5 text-purple-500"></i><span>Remote Friendly</span></div><div class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-0.5 text-purple-500"></i><span>Hyderabad</span></div></div>
+                    <div class="mt-auto"><a href="https://bizplus4u.com/" target="_blank" class="block w-full bg-purple-600 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-purple-700 transition-colors text-sm">Visit Website</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-sky-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">U</div><h2 class="text-xl font-bold text-slate-800 ml-3">Uplers</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-sky-400"></i><span>Tech & Digital Talent</span></div><div class="flex items-start"><i data-lucide="globe-2" class="w-4 h-4 mr-2 mt-0.5 text-sky-400"></i><span>Remote Hiring</span></div></div>
+                    <div class="mt-auto"><a href="https://www.uplers.com/career/" target="_blank" class="block w-full bg-sky-500 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-sky-600 transition-colors text-sm">View Remote Roles</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-gray-700 rounded-lg flex items-center justify-center text-white font-bold text-xl">T</div><h2 class="text-xl font-bold text-slate-800 ml-3">Turing</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-gray-600"></i><span>AI-Powered Talent Cloud</span></div><div class="flex items-start"><i data-lucide="globe-2" class="w-4 h-4 mr-2 mt-0.5 text-gray-600"></i><span>Global Remote Jobs</span></div></div>
+                    <div class="mt-auto"><a href="https://www.turing.com/jobs" target="_blank" class="block w-full bg-gray-700 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-gray-800 transition-colors text-sm">View Remote Roles</a></div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-transform hover:scale-105 duration-300 company-card">
+                    <div class="flex items-center mb-4"><div class="w-14 h-14 bg-green-700 rounded-lg flex items-center justify-center text-white font-bold text-xl">X</div><h2 class="text-xl font-bold text-slate-800 ml-3">X-Team</h2></div>
+                    <div class="space-y-2 text-slate-600 text-sm mb-4 flex-grow"><div class="flex items-start"><i data-lucide="briefcase" class="w-4 h-4 mr-2 mt-0.5 text-green-600"></i><span>Remote Developer Teams</span></div><div class="flex items-start"><i data-lucide="globe-2" class="w-4 h-4 mr-2 mt-0.5 text-green-600"></i><span>Fully Remote</span></div></div>
+                    <div class="mt-auto"><a href="https://x-team.com/remote-jobs/" target="_blank" class="block w-full bg-green-700 text-white text-center font-semibold py-2 px-3 rounded-lg hover:bg-green-800 transition-colors text-sm">View Remote Roles</a></div>
+                </div>
+
             </main>
         </section>
 
-        <!-- Footer -->
-        <footer class="text-center text-slate-500 mt-16">
-            <p>&copy; 2025 Job Directory. Data compiled for informational purposes.</p>
-            <p>Always verify details on the official company career portals.</p>
-        </footer>
     </div>
+
+    <footer class="text-center p-8 border-t border-slate-200">
+        <p class="text-slate-500">Directory compiled for informational purposes. Always apply through official company portals.</p>
+    </footer>
 
     <script>
         lucide.createIcons();
     </script>
 </body>
 </html>
-
