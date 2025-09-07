@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERN Stack Job Application Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Basic styles and theme variables */
+        :root {
+            --bg-color: #f4f7f9;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --heading-color: #1a253c;
+            --accent-color: #3b82f6;
+            --border-color: #e1e8ed;
+            --shadow-color: rgba(0, 0, 0, 0.08);
+            --tag-bg: #e9ecef;
+            --tag-text: #495057;
+            --progress-bar-bg: #e9ecef;
+            --progress-bar-fill: #10b981;
+        }
+
+        .dark-mode {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --heading-color: #ffffff;
+            --accent-color: #60a5fa;
+            --border-color: #374151;
+            --shadow-color: rgba(0, 0, 0, 0.2);
+            --tag-bg: #374151;
+            --tag-text: #e0e0e0;
+            --progress-bar-bg: #374151;
+            --progress-bar-fill: #34d399;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .company-card, .header-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px var(--shadow-color);
+        }
+
+        .checked {
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+        
+        .copy-feedback {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--heading-color);
+            color: var(--bg-color);
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            pointer-events: none;
+        }
+        
+        .copy-feedback.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-10px);
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-8">
+
+    <div class="max-w-7xl mx-auto">
+        <!-- Header Section -->
+        <header class="header-card rounded-xl p-6 mb-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div>
+                    <h1 class="text-3xl font-bold" style="color: var(--heading-color);">MERN Stack Job Tracker</h1>
+                    <p class="text-md mt-1" style="color: var(--text-color);">A checklist for your job applications in Jaipur & beyond. Last updated: September 7, 2025.</p>
+                </div>
+                <button id="theme-toggle" class="p-3 rounded-full text-2xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" title="Toggle dark mode">
+                    🌓
+                </button>
+            </div>
+            
+            <div class="mt-6">
+                <input type="text" id="search-box" placeholder="Search by company, role, or location..." class="w-full p-3 rounded-lg border focus:ring-2 focus:ring-blue-500 transition" style="background-color: var(--bg-color); border-color: var(--border-color); color: var(--text-color);">
+            </div>
+            
+            <div class="mt-6">
+                <label for="progress-bar" class="block font-semibold mb-2">Application Progress</label>
+                <div class="w-full rounded-full h-3" style="background-color: var(--progress-bar-bg);">
+                    <div id="progress-fill" class="h-3 rounded-full transition-all duration-500" style="width: 0%; background-color: var(--progress-bar-fill);"></div>
+                </div>
+                <p id="progress-text" class="text-right text-sm mt-2 font-medium">0/0 Applied</p>
+            </div>
+        </header>
+
+        <!-- Company List -->
+        <main id="company-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Company cards will be injected here -->
+        </main>
+        
+        <div id="copy-notification" class="copy-feedback">Copied to clipboard!</div>
+    </div>
+
+    <script>
+        const companyData = [
+            { name: "360 Degree Technosoft", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "A3Logics", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Aalpha Information Systems India Pvt. Ltd.", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Akeo", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Alea IT Solutions", role: "Software Company", location: "Jaipur", notes: "Located in Tilak Nagar.", email: "support@aleaitsolutions.com", phone: "+919610365064", website: "https://www.aleaitsolutions.com" },
+            { name: "Alphonic Network Solutions", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Amdocs", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Amplework Software", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Appello Software", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Appiness Interactive", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Appinventiv", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Appiqo Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "AppSquadz Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Appventurez", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Arting Digital Pvt. Ltd.", role: "MERN Stack Developer", location: "Jaipur", notes: "Mid/senior roles available.", email: "info@artingdigital.com", phone: "+918427418828", website: "https://www.artingdigital.com" },
+            { name: "Aryavrat Infotech", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Auriga IT", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "BR Softech", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Belitsoft", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "BetterWorld Technology", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "BMS IT Services", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "BrainMobi", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Brainstorm Force", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Brenin Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Bridge Global", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Cadabra Studio", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Capgemini", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Celebal Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Chetu", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Chromedia", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Ciel", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Cleveroad", role: "Developer", location: "Remote", notes: "", email: "", phone: "", website: "" },
+            { name: "Cliqon Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Closeloop Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Clover Infotech", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Codebird Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Codezion Softwares", role: "Software, Marketing", location: "Jaipur", notes: "Located in Tilak Nagar.", email: "", phone: "+918386893777", website: "https://codezion.com" },
+            { name: "Cognizant", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Coherent Lab LLP", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Competenza Innovare", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Contus Tech", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "CozCore Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "CreatorShadow", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Daffodil Software", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Data Ingenious Global Limited", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Decipher Zone Technologies Pvt. Ltd.", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Deorwine Infotech", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Dev Technosys", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Developer Bazaar Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Devstringx Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "DianApps", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "DoneByNone", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Dotsquares Ltd.", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "eBizneeds", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "eLogicTech", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Elsner Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Emizen Tech Pvt. Ltd.", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "EoxysIT Solution LLP", role: "MERN Stack Intern", location: "Jaipur", notes: "1.5yr internship, conversion possible. Pay: ₹3k–₹10k/mo.", email: "hr@eoxysit.com", phone: "+917321873685", website: "https://eoxysit.com" },
+            { name: "Finoit Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Flipshope", role: "Developer", location: "Jaipur", notes: "Located in Pratap Nagar.", email: "hr@flipshope.com", phone: "", website: "https://flipshope.com" },
+            { name: "Fonix Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "FreshoKartz", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Fusion Informatics", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Future Labs", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Future Profilez India Pvt. Ltd.", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Geniusee", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "GirnarSoft", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "HCL Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "HackerEarth", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Harbor Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "HawksCode Softwares", role: "Software, Marketing", location: "Jaipur", notes: "Located in Lalkothi.", email: "", phone: "+919672304111", website: "https://hawkscode.com" },
+            { name: "Helpfull Insight Pvt. Ltd.", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Helpware India", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Hopper Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Hornet Dynamics Pvt. Ltd.", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Hunar Street Technologies Pvt. Ltd.", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Hyperlink InfoSystem", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "IMG Global Infotech", role: "Software, E-commerce", location: "Jaipur", notes: "Located in Nirman Nagar.", email: "mohitmittal23@gmail.com", phone: "+919694097244", website: "https://www.imgglobalinfotech.com" },
+            { name: "InApp", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Indus Net Techshines", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "IndusInn Labs", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Inflexion Interactive", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "InfoObjects Software (India) Pvt Ltd", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Infosys", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Innoraft", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Ionixx Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "JECRC Incubated Startups", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Kadam Technologies Pvt. Ltd.", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Kainskep Solutions", role: "Software Developer", location: "Jaipur", notes: "CIN: U72900RJ2021PTC078669", email: "info@kainskep.com", phone: "", website: "" },
+            { name: "Kapexa", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Karya Tech", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Kays Harbor Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Kinnect", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Konstant Infosolutions", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "KPMG Lighthouse", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Labrys", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Logic Clutch Software LLP", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "MIIC (MNIT Incubated Startups)", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "MMF Infotech Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "MTX Group", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "MetaBlock Technologies", role: "IT Services", location: "Jaipur", notes: "LLP: ABC-1182", email: "info@metablocktechnologies.com", phone: "+919358593003", website: "https://metablocktechnologies.com" },
+            { name: "Metacube Software Pvt. Ltd.", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Mindbowser", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Mindfire Solutions", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Mindinventory", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Mobisoft Infotech", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Moonstack Pvt. Ltd.", role: "Web/Mobile/Ecomm", location: "Jaipur", notes: "Located in Vaishali Nagar.", email: "", phone: "+919772009900", website: "https://moonstack.co" },
+            { name: "Mphasis", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Multi Recruit", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Multidots", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Nagarro", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Nearsure", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Net Solutions", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "NetCore Solutions", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Netcracker", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Netlinx Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Next Big Technology", role: "Web/Mobile Dev", location: "Jaipur", notes: "CIN: U72900RJ2021PTC074408", email: "info@nextbigtechnology.com", phone: "", website: "https://nextbigtechnology.com" },
+            { name: "Nimap Infotech", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Nitor Infotech", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Octal IT Solutions", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Ojas Innovative Solutions", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "OpenXcell", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Orion InfoSolutions", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Owebest Technologies", role: "MERN Developer", location: "Jaipur", notes: "TypeScript/Next.js is a plus. CIN: U72900RJ2017PTC057254", email: "owebest@gmail.com", phone: "", website: "https://www.owebest.com" },
+            { name: "Persistent Systems", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Phoenix Advanced Softwares", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "PiZone Infotech Solution Pvt. Ltd.", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "PixalBox", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "PixelCrayons", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Pixlogix", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Pratham Software Pvt. Ltd.", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Predusk Technology Pvt. Ltd.", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Protocloud Technologies Pvt. Ltd.", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Protovo Solutions", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Q1 Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "QED42", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "QSS Technosoft", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Qrata", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "QuickScale", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "R&D Dev Labs", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Ranosys Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Reddensoft", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Regex Software", role: "Internship Program", location: "Jaipur", notes: "Training + live-project program.", email: "info@regexsoftware.com", phone: "+919602880219", website: "https://www.regexsoftware.com" },
+            { name: "Requin Solutions Pvt Ltd", role: "Software Developer", location: "Jaipur", notes: "CIN: U72900RJ2019PTC066325", email: "cherryrajput@outlook.com", phone: "", website: "" },
+            { name: "Rishabh Software", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Rorko", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Rushkar Technology Pvt. Ltd.", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Saigon Technology", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Scnsoft", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Scriptics Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "SeamlessTech", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Searce", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Senthil Infotech", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Shri Genesis", role: "Software Solutions", location: "Jaipur", notes: "Located in Vaishali Nagar.", email: "info@shrigenesis.com", phone: "+919799923531", website: "https://shrigenesis.com" },
+            { name: "Simform", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Simpalm", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Singsys", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Soft Suave Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Softuvo Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Softvolt", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Source Soft Solutions", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Sparx IT Solutions", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Sphinx Solutions", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Start Designs", role: "MERN Stack Developer", location: "Jaipur", notes: "Full-stack React + Node role.", email: "hr@startdesigns.com", phone: "", website: "https://www.startdesigns.com" },
+            { name: "StartUp Oasis", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Suffescom Solutions", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "SunTec Business Solutions", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Sutherland", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Svitla Systems", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "SynapseIndia", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Synarion IT Solutions", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "TCS", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "TIGI HR Solution Pvt. Ltd.", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Tapptitude", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "TatvaSoft", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Tech Mahindra", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "TechAhead", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "TechBrane", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "TechFerry", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "TechGropse", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "TechJini", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "TechKopra", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Technoloader Pvt. Ltd.", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Technosoft India", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Techoxa", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Techugo", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Techuz InfoWeb", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "The NineHertz", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Third Rock Techkno", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Thinksys", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "ThoughtWorx", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "TigerLabs", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Trigma", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Turing", role: "Remote Dev Platform", location: "Global (Remote)", notes: "Connects developers with US companies.", email: "", phone: "", website: "https://www.turing.com" },
+            { name: "Unified Infotech", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Uplers", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Upwork", role: "Freelance Platform", location: "Global (Remote)", notes: "Large marketplace for freelance jobs.", email: "", phone: "", website: "https://www.upwork.com" },
+            { name: "ValueCoders", role: "Outsourcing Firm", location: "India-based (Remote)", notes: "Provides dedicated MERN teams.", email: "", phone: "", website: "https://www.valuecoders.com" },
+            { name: "Vates", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Vinsol", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Virtusa", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Voylla", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Vrinsoft Technology", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "WDP Technologies Pvt. Ltd.", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "WebClues Global", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "WebSenor Private Limited", role: "Software, Marketing", location: "Udaipur", notes: "", email: "", phone: "+919950834560", website: "https://www.websenor.com" },
+            { name: "Webbisoft", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Webguru Infosystems", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Webkul Software Pvt. Ltd.", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "WeblineIndia", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Wipro", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "WoodenStreet", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Xebia", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "YUDIZ SOLUTIONS", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "YUJ Designs", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Zcodeo LLP", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Zelta Tech", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Zensar Technologies", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Zignuts Technolab", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" },
+            { name: "Zyoin", role: "Developer", location: "Jaipur", notes: "", email: "", phone: "", website: "" }
+        ].sort((a, b) => a.name.localeCompare(b.name));
+
+        const companyListEl = document.getElementById('company-list');
+        const searchBox = document.getElementById('search-box');
+        const themeToggle = document.getElementById('theme-toggle');
+        const progressFill = document.getElementById('progress-fill');
+        const progressText = document.getElementById('progress-text');
+        const copyNotification = document.getElementById('copy-notification');
+
+        const statusTypes = ['Researched', 'Applied', 'Interviewing', 'Offer', 'Rejected'];
+
+        const generateId = (name) => name.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+
+        const showCopyFeedback = () => {
+            copyNotification.classList.add('show');
+            setTimeout(() => {
+                copyNotification.classList.remove('show');
+            }, 2000);
+        };
+        
+        window.copyToClipboard = (text) => {
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(showCopyFeedback);
+            } else {
+                // Fallback for insecure contexts or older browsers
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                textArea.style.position = "fixed";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    showCopyFeedback();
+                } catch (err) {
+                    console.error('Fallback copy failed', err);
+                }
+                document.body.removeChild(textArea);
+            }
+        };
+
+        const renderCompanies = (filter = '') => {
+            companyListEl.innerHTML = '';
+            const lowerCaseFilter = filter.toLowerCase();
+
+            const filteredData = companyData.filter(c => 
+                c.name.toLowerCase().includes(lowerCaseFilter) ||
+                c.location.toLowerCase().includes(lowerCaseFilter) ||
+                c.role.toLowerCase().includes(lowerCaseFilter)
+            );
+
+            if (filteredData.length === 0) {
+                companyListEl.innerHTML = `<p class="col-span-full text-center">No companies found matching your search.</p>`;
+                return;
+            }
+
+            filteredData.forEach(company => {
+                const companyId = generateId(company.name);
+                const card = document.createElement('div');
+                card.className = 'company-card rounded-xl p-6 flex flex-col gap-4 transition-transform transform hover:-translate-y-1';
+                
+                const contactInfo = `
+                    ${company.email ? `<div class="flex items-center gap-2 text-sm"><span class="font-bold">Email:</span> <a href="mailto:${company.email}" class="truncate hover:underline" style="color: var(--accent-color);">${company.email}</a><button onclick="copyToClipboard('${company.email}')" class="text-lg">📋</button></div>` : ''}
+                    ${company.phone ? `<div class="flex items-center gap-2 text-sm"><span class="font-bold">Phone:</span> <a href="tel:${company.phone}" class="hover:underline" style="color: var(--accent-color);">${company.phone}</a><button onclick="copyToClipboard('${company.phone}')" class="text-lg">📋</button></div>` : ''}
+                    ${company.website ? `<div class="flex items-center gap-2 text-sm"><span class="font-bold">Web:</span> <a href="${company.website}" target="_blank" rel="noopener noreferrer" class="truncate hover:underline" style="color: var(--accent-color);">${company.website}</a></div>` : ''}
+                `;
+                
+                const checkboxes = statusTypes.map(status => `
+                    <label class="flex items-center cursor-pointer">
+                        <input type="checkbox" data-company-id="${companyId}" data-status="${status.toLowerCase()}" class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                        <span class="ml-2">${status}</span>
+                    </label>
+                `).join('');
+
+                card.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-start">
+                             <h2 class="text-xl font-bold" style="color: var(--heading-color);">${company.name}</h2>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                           <span class="text-xs font-semibold px-2.5 py-1 rounded-full" style="background-color: var(--tag-bg); color: var(--tag-text);">${company.location}</span>
+                           <span class="text-xs font-semibold px-2.5 py-1 rounded-full" style="background-color: var(--tag-bg); color: var(--tag-text);">${company.role}</span>
+                        </div>
+                    </div>
+                    <div class="text-sm space-y-2 border-t border-b py-4" style="border-color: var(--border-color);">
+                        ${company.notes ? `<p><span class="font-bold">Notes:</span> ${company.notes}</p>` : ''}
+                        ${contactInfo}
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-2">Status</h3>
+                        <div class="grid grid-cols-2 gap-2 text-sm">${checkboxes}</div>
+                    </div>
+                `;
+                companyListEl.appendChild(card);
+            });
+
+            loadState();
+        };
+
+        const saveState = (companyId, status, isChecked) => {
+            localStorage.setItem(`${companyId}-${status}`, isChecked);
+        };
+
+        const loadState = () => {
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                const { companyId, status } = checkbox.dataset;
+                const isChecked = localStorage.getItem(`${companyId}-${status}`) === 'true';
+                checkbox.checked = isChecked;
+                updateCheckboxStyle(checkbox);
+            });
+            updateProgress();
+        };
+        
+        const updateCheckboxStyle = (checkbox) => {
+            checkbox.closest('label').classList.toggle('checked', checkbox.checked);
+        };
+        
+        const updateProgress = () => {
+            const total = companyData.length;
+            const appliedCount = companyData.filter(c => localStorage.getItem(`${generateId(c.name)}-applied`) === 'true').length;
+            const percentage = total > 0 ? (appliedCount / total) * 100 : 0;
+            
+            progressFill.style.width = `${percentage}%`;
+            progressText.textContent = `${appliedCount}/${total} Applied`;
+        };
+
+        searchBox.addEventListener('input', (e) => renderCompanies(e.target.value));
+
+        companyListEl.addEventListener('change', (e) => {
+            if (e.target.type === 'checkbox') {
+                const { companyId, status } = e.target.dataset;
+                saveState(companyId, status, e.target.checked);
+                updateCheckboxStyle(e.target);
+                if (status === 'applied') {
+                    updateProgress();
+                }
+            }
+        });
+
+        themeToggle.addEventListener('click', () => {
+            const isDarkMode = document.body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        });
+
+        const loadTheme = () => {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadTheme();
+            renderCompanies();
+        });
+    </script>
+</body>
+</html>
+
