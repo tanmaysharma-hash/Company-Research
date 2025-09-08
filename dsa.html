@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA In 70 Days Roadmap</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 20px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-top: 0;
+            font-size: 2.2em;
+        }
+        h2 {
+            color: #555;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            font-size: 1.6em;
+        }
+        h3 {
+            color: #007bff;
+            margin-top: 25px;
+            font-size: 1.2em;
+        }
+        .day-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            background-color: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e1e1e1;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .day-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        .day-number {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #007bff;
+            margin-right: 15px;
+            flex-shrink: 0;
+            width: 50px;
+        }
+        .task-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .task-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 28px;
+        }
+        .task-list li input[type="checkbox"] {
+            position: absolute;
+            left: 0;
+            top: 4px;
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+            transition: background-color 0.2s;
+        }
+        .task-list li input[type="checkbox"]:checked {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .task-list li input[type="checkbox"]:checked:after {
+            content: '✓';
+            display: block;
+            color: #fff;
+            font-size: 16px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .task-list li a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .task-list li a:hover {
+            text-decoration: underline;
+        }
+        .concept {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .week-title {
+            text-align: center;
+            background-color: #e9f5ff;
+            color: #007bff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 30px 0;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>70-Day DSA Mastery Roadmap</h1>
+    <p style="text-align: center; color: #777;">A structured plan to ace your technical interviews.</p>
+
+    <div class="week-title">Week 1: Mastering Arrays (and Time Complexity Basics)</div>
+    <div class="day-item">
+        <div class="day-number">Day 1</div>
+        <div>
+            <h3>Time & Space Complexity</h3>
+            <p class="concept">Goal: Learn Big-O, Big-Ω, Big-Θ notations.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d1t1"> Read: <a href="https://www.geeksforgeeks.org/analysis-of-algorithms-set-1-asymptotic-analysis/" target="_blank">Analysis of Algorithms (GeeksforGeeks)</a></li>
+                <li><input type="checkbox" id="d1t2"> Practice: <a href="https://leetcode.com/discuss/general-discussion/1127238/time-complexity-of-leetcode-problems" target="_blank">Time Complexity of LeetCode Problems</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 2</div>
+        <div>
+            <h3>Arrays – Basics</h3>
+            <p class="concept">Goal: Learn array declaration, traversal, and simple problems.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d2t1"> Two Sum: <a href="https://leetcode.com/problems/two-sum/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d2t2"> Best Time to Buy and Sell Stock: <a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 3</div>
+        <div>
+            <h3>Arrays - Sliding Window</h3>
+            <p class="concept">Goal: Master fixed and variable size sliding window.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d3t1"> Maximum Subarray (Kadane’s Algo): <a href="https://leetcode.com/problems/maximum-subarray/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d3t2"> Longest Substring Without Repeating Characters: <a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 4</div>
+        <div>
+            <h3>Arrays - Prefix Sum</h3>
+            <p class="concept">Goal: Learn cumulative sum techniques for range queries.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d4t1"> Range Sum Query - Immutable: <a href="https://leetcode.com/problems/range-sum-query-immutable/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d4t2"> Subarray Sum Equals K: <a href="https://leetcode.com/problems/subarray-sum-equals-k/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 5</div>
+        <div>
+            <h3>Arrays - Binary Search</h3>
+            <p class="concept">Goal: Practice standard binary search and modifications.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d5t1"> Binary Search: <a href="https://leetcode.com/problems/binary-search/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d5t2"> Find First and Last Position of Element in Sorted Array: <a href="https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 6</div>
+        <div>
+            <h3>Arrays - Two Pointers</h3>
+            <p class="concept">Goal: Learn how to approach problems with two pointers from start/end.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d6t1"> Container With Most Water: <a href="https://leetcode.com/problems/container-with-most-water/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d6t2"> 3Sum: <a href="https://leetcode.com/problems/3sum/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 7</div>
+        <div>
+            <h3>Arrays - Sorting Techniques</h3>
+            <p class="concept">Goal: Practice sorting-based approaches.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d7t1"> Merge Intervals: <a href="https://leetcode.com/problems/merge-intervals/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d7t2"> Sort Colors (Dutch National Flag): <a href="https://leetcode.com/problems/sort-colors/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="week-title">Week 2: Strings + Hashing</div>
+    <div class="day-item">
+        <div class="day-number">Day 8</div>
+        <div>
+            <h3>Strings - Basics & Character Count</h3>
+            <p class="concept">Goal: Understand basic string manipulations.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d8t1"> Valid Anagram: <a href="https://leetcode.com/problems/valid-anagram/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d8t2"> Ransom Note: <a href="https://leetcode.com/problems/ransom-note/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 9</div>
+        <div>
+            <h3>Strings - Palindrome Problems</h3>
+            <p class="concept">Goal: Master checking palindromes and variations of it.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d9t1"> Valid Palindrome: <a href="https://leetcode.com/problems/valid-palindrome/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d9t2"> Longest Palindromic Substring: <a href="https://leetcode.com/problems/longest-palindromic-substring/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 10</div>
+        <div>
+            <h3>Strings - Two Pointer + Hashing</h3>
+            <p class="concept">Goal: Combine two techniques for efficient string problems.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d10t1"> Reverse Vowels of a String: <a href="https://leetcode.com/problems/reverse-vowels-of-a-string/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d10t2"> Isomorphic Strings: <a href="https://leetcode.com/problems/isomorphic-strings/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 11</div>
+        <div>
+            <h3>Strings - Sliding Window on Strings</h3>
+            <p class="concept">Goal: Apply sliding window technique to strings.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d11t1"> Minimum Window Substring: <a href="https://leetcode.com/problems/minimum-window-substring/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d11t2"> Permutation in String: <a href="https://leetcode.com/problems/permutation-in-string/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 12</div>
+        <div>
+            <h3>HashMap – Fundamentals</h3>
+            <p class="concept">Goal: Practice HashMap operations and applications.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d12t1"> Two Sum (again): <a href="https://leetcode.com/problems/two-sum/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d12t2"> Group Anagrams: <a href="https://leetcode.com/problems/group-anagrams/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 13</div>
+        <div>
+            <h3>HashSet + Duplicates</h3>
+            <p class="concept">Goal: Learn to handle duplicate detection using sets.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d13t1"> Contains Duplicate: <a href="https://leetcode.com/problems/contains-duplicate/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d13t2"> Longest Consecutive Sequence: <a href="https://leetcode.com/problems/longest-consecutive-sequence/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 14</div>
+        <div>
+            <h3>Wrap-up & Revision</h3>
+            <p class="concept">Goal: Revisit difficult problems and practice.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d14t1"> Re-attempt at least 3 previously solved problems.</li>
+                <li><input type="checkbox" id="d14t2"> Optional Challenge: <a href="https://leetcode.com/problems/encode-and-decode-strings/" target="_blank">Encode and Decode Strings</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="week-title">Week 3: Linked Lists</div>
+    <div class="day-item">
+        <div class="day-number">Day 15</div>
+        <div>
+            <h3>Linked List Basics</h3>
+            <p class="concept">Goal: Understand singly linked list fundamentals.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d15t1"> Reverse Linked List: <a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d15t2"> Middle of the Linked List: <a href="https://leetcode.com/problems/middle-of-the-linked-list/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 16</div>
+        <div>
+            <h3>Linked List Insertion and Deletion</h3>
+            <p class="concept">Goal: Master node manipulation techniques.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d16t1"> Delete Node in a Linked List: <a href="https://leetcode.com/problems/delete-node-in-a-linked-list/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d16t2"> Remove Nth Node From End of List: <a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 17</div>
+        <div>
+            <h3>Detecting Cycles in Linked List</h3>
+            <p class="concept">Goal: Detect and handle cycles.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d17t1"> Linked List Cycle: <a href="https://leetcode.com/problems/linked-list-cycle/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d17t2"> Linked List Cycle II: <a href="https://leetcode.com/problems/linked-list-cycle-ii/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 18</div>
+        <div>
+            <h3>Merge & Sort Linked Lists</h3>
+            <p class="concept">Goal: Work with sorting and merging operations.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d18t1"> Merge Two Sorted Lists: <a href="https://leetcode.com/problems/merge-two-sorted-lists/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d18t2"> Sort List: <a href="https://leetcode.com/problems/sort-list/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 19</div>
+        <div>
+            <h3>Advanced Reversals</h3>
+            <p class="concept">Goal: Reverse parts of a linked list.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d19t1"> Reverse Linked List II: <a href="https://leetcode.com/problems/reverse-linked-list-ii/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d19t2"> Reverse Nodes in k-Group: <a href="https://leetcode.com/problems/reverse-nodes-in-k-group/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 20</div>
+        <div>
+            <h3>Intersection & Palindrome</h3>
+            <p class="concept">Goal: Learn to check for intersection and palindromes.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d20t1"> Intersection of Two Linked Lists: <a href="https://leetcode.com/problems/intersection-of-two-linked-lists/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d20t2"> Palindrome Linked List: <a href="https://leetcode.com/problems/palindrome-linked-list/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 21</div>
+        <div>
+            <h3>Wrap-up & Revision</h3>
+            <p class="concept">Goal: Re-solve tricky problems from the week.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d21t1"> Draw diagrams for Linked List Cycle and Reverse Nodes in K Groups.</li>
+                <li><input type="checkbox" id="d21t2"> Optional Challenge: <a href="https://leetcode.com/problems/add-two-numbers/" target="_blank">Add Two Numbers</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="week-title">Week 4: Stacks and Queues</div>
+    <div class="day-item">
+        <div class="day-number">Day 22</div>
+        <div>
+            <h3>Stack Basics</h3>
+            <p class="concept">Goal: Understand the fundamentals of stack operations (LIFO).</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d22t1"> Valid Parentheses: <a href="https://leetcode.com/problems/valid-parentheses/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d22t2"> Min Stack: <a href="https://leetcode.com/problems/min-stack/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 23</div>
+        <div>
+            <h3>Stack Advanced Applications</h3>
+            <p class="concept">Goal: Handle stack problems involving indices and nested structures.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d23t1"> Next Greater Element I: <a href="https://leetcode.com/problems/next-greater-element-i/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d23t2"> Next Greater Element II: <a href="https://leetcode.com/problems/next-greater-element-ii/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 24</div>
+        <div>
+            <h3>Monotonic Stack</h3>
+            <p class="concept">Goal: Learn the concept of increasing/decreasing stack.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d24t1"> Daily Temperatures: <a href="https://leetcode.com/problems/daily-temperatures/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d24t2"> Asteroid Collision: <a href="https://leetcode.com/problems/asteroid-collision/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 25</div>
+        <div>
+            <h3>Queue Basics</h3>
+            <p class="concept">Goal: Learn FIFO structure and implement using arrays or lists.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d25t1"> Implement Queue using Stacks: <a href="https://leetcode.com/problems/implement-queue-using-stacks/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d25t2"> Number of Recent Calls: <a href="https://leetcode.com/problems/number-of-recent-calls/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 26</div>
+        <div>
+            <h3>Deque (Double-ended Queue)</h3>
+            <p class="concept">Goal: Learn how to insert and delete from both ends efficiently.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d26t1"> Sliding Window Maximum: <a href="https://leetcode.com/problems/sliding-window-maximum/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d26t2"> Design Circular Deque: <a href="https://leetcode.com/problems/design-circular-deque/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 27</div>
+        <div>
+            <h3>Stack-Queue Hybrid Problems</h3>
+            <p class="concept">Goal: Solve real-world problems involving both data structures.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d27t1"> Evaluate Reverse Polish Notation: <a href="https://leetcode.com/problems/evaluate-reverse-polish-notation/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d27t2"> Implement Stack using Queues: <a href="https://leetcode.com/problems/implement-stack-using-queues/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 28</div>
+        <div>
+            <h3>Wrap-up & Revision</h3>
+            <p class="concept">Goal: Re-attempt tricky problems.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d28t1"> Practice visualization and dry runs.</li>
+                <li><input type="checkbox" id="d28t2"> Optional Challenge: <a href="https://leetcode.com/problems/decode-string/" target="_blank">Decode String</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="week-title">Week 5: Recursion & Backtracking</div>
+    <div class="day-item">
+        <div class="day-number">Day 29</div>
+        <div>
+            <h3>Basics of Recursion</h3>
+            <p class="concept">Goal: Understand the concept of recursion.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d29t1"> Factorial of a Number (custom implementation)</li>
+                <li><input type="checkbox" id="d29t2"> Fibonacci Number: <a href="https://leetcode.com/problems/fibonacci-number/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 30</div>
+        <div>
+            <h3>Recursion Problems</h3>
+            <p class="concept">Goal: Apply recursion to solve small problems.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d30t1"> Reverse Linked List (Recursive): <a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d30t2"> Power of Three: <a href="https://leetcode.com/problems/power-of-three/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 31</div>
+        <div>
+            <h3>Backtracking Intro</h3>
+            <p class="concept">Goal: Learn how to explore all possible solutions.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d31t1"> Subsets: <a href="https://leetcode.com/problems/subsets/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d31t2"> Combination Sum: <a href="https://leetcode.com/problems/combination-sum/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 32</div>
+        <div>
+            <h3>Backtracking – Combinations & Permutations</h3>
+            <p class="concept">Goal: Understand permutation logic and constraints.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d32t1"> Permutations: <a href="https://leetcode.com/problems/permutations/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d32t2"> Combinations: <a href="https://leetcode.com/problems/combinations/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 33</div>
+        <div>
+            <h3>Backtracking – Include/Exclude Pattern</h3>
+            <p class="concept">Goal: Learn subset and decision-tree style problems.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d33t1"> Subsets II (handle duplicates): <a href="https://leetcode.com/problems/subsets-ii/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d33t2"> Letter Combinations of a Phone Number: <a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 34</div>
+        <div>
+            <h3>Backtracking – Constraints</h3>
+            <p class="concept">Goal: Understand how to deal with constraint-based paths.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d34t1"> N-Queens: <a href="https://leetcode.com/problems/n-queens/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d34t2"> Word Search: <a href="https://leetcode.com/problems/word-search/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 35</div>
+        <div>
+            <h3>Recap + Challenge</h3>
+            <p class="concept">Goal: Solidify concepts and push your limits.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d35t1"> Re-attempt any tricky backtracking problems.</li>
+                <li><input type="checkbox" id="d35t2"> Optional Challenge: <a href="https://leetcode.com/problems/sudoku-solver/" target="_blank">Sudoku Solver</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="week-title">Week 6: Binary Trees and BSTs</div>
+    <div class="day-item">
+        <div class="day-number">Day 36</div>
+        <div>
+            <h3>Binary Tree Basics</h3>
+            <p class="concept">Goal: Understand tree structure and traversal basics.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d36t1"> Invert Binary Tree: <a href="https://leetcode.com/problems/invert-binary-tree/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d36t2"> Maximum Depth of Binary Tree: <a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 37</div>
+        <div>
+            <h3>Tree Traversals</h3>
+            <p class="concept">Goal: Practice in-order, pre-order, and post-order traversals.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d37t1"> Binary Tree Inorder Traversal: <a href="https://leetcode.com/problems/binary-tree-inorder-traversal/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d37t2"> Binary Tree Preorder Traversal: <a href="https://leetcode.com/problems/binary-tree-preorder-traversal/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 38</div>
+        <div>
+            <h3>Level Order and Zigzag</h3>
+            <p class="concept">Goal: Understand BFS on trees.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d38t1"> Binary Tree Level Order Traversal: <a href="https://leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d38t2"> Binary Tree Zigzag Level Order Traversal: <a href="https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 39</div>
+        <div>
+            <h3>Lowest Common Ancestor (LCA)</h3>
+            <p class="concept">Goal: Learn about tree ancestors and recursive backtracking.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d39t1"> Lowest Common Ancestor of a Binary Tree: <a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d39t2"> Path Sum: <a href="https://leetcode.com/problems/path-sum/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 40</div>
+        <div>
+            <h3>Diameter & Balanced Tree</h3>
+            <p class="concept">Goal: Understand tree properties (height, balance).</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d40t1"> Diameter of Binary Tree: <a href="https://leetcode.com/problems/diameter-of-binary-tree/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d40t2"> Balanced Binary Tree: <a href="https://leetcode.com/problems/balanced-binary-tree/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 41</div>
+        <div>
+            <h3>BST – Basics</h3>
+            <p class="concept">Goal: Practice BST-specific operations.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d41t1"> Validate Binary Search Tree: <a href="https://leetcode.com/problems/validate-binary-search-tree/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d41t2"> Search in a Binary Search Tree: <a href="https://leetcode.com/problems/search-in-a-binary-search-tree/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 42</div>
+        <div>
+            <h3>BST – Insert & Delete</h3>
+            <p class="concept">Goal: Understand structural modifications in BST.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d42t1"> Insert into a Binary Search Tree: <a href="https://leetcode.com/problems/insert-into-a-binary-search-tree/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d42t2"> Delete Node in a BST: <a href="https://leetcode.com/problems/delete-node-in-a-bst/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="week-title">Week 7: Heaps, Tries & Graphs (Intro)</div>
+    <div class="day-item">
+        <div class="day-number">Day 43</div>
+        <div>
+            <h3>Heaps Basics</h3>
+            <p class="concept">Goal: Understand Min-Heap and Max-Heap concepts.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d43t1"> Kth Largest Element in an Array: <a href="https://leetcode.com/problems/kth-largest-element-in-an-array/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d43t2"> Top K Frequent Elements: <a href="https://leetcode.com/problems/top-k-frequent-elements/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 44</div>
+        <div>
+            <h3>Sliding Window + Heaps</h3>
+            <p class="concept">Goal: Practice heap use with sliding window technique.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d44t1"> Sliding Window Maximum: <a href="https://leetcode.com/problems/sliding-window-maximum/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d44t2"> Find Median from Data Stream: <a href="https://leetcode.com/problems/find-median-from-data-stream/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 45</div>
+        <div>
+            <h3>Introduction to Tries</h3>
+            <p class="concept">Goal: Understand Trie data structure and implementation.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d45t1"> Implement Trie (Prefix Tree): <a href="https://leetcode.com/problems/implement-trie-prefix-tree/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d45t2"> Replace Words: <a href="https://leetcode.com/problems/replace-words/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 46</div>
+        <div>
+            <h3>Word Problems Using Trie</h3>
+            <p class="concept">Goal: Practice string manipulation with Trie optimization.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d46t1"> Word Search II: <a href="https://leetcode.com/problems/word-search-ii/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d46t2"> Design Add and Search Words Data Structure: <a href="https://leetcode.com/problems/design-add-and-search-words-data-structure/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 47</div>
+        <div>
+            <h3>Graph Basics (Adjacency List, DFS)</h3>
+            <p class="concept">Goal: Get comfortable with graph representation & DFS.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d47t1"> Number of Islands: <a href="https://leetcode.com/problems/number-of-islands/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d47t2"> Flood Fill: <a href="https://leetcode.com/problems/flood-fill/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 48</div>
+        <div>
+            <h3>Graph BFS & DFS Practice</h3>
+            <p class="concept">Goal: Explore both DFS and BFS patterns in real scenarios.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d48t1"> Clone Graph: <a href="https://leetcode.com/problems/clone-graph/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d48t2"> Rotten Oranges: <a href="https://leetcode.com/problems/rotting-oranges/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 49</div>
+        <div>
+            <h3>Cycle Detection</h3>
+            <p class="concept">Goal: Learn how to detect cycles in graphs.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d49t1"> Course Schedule: <a href="https://leetcode.com/problems/course-schedule/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d49t2"> Detect Cycle in Directed Graph (GFG): <a href="https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1" target="_blank">GeeksforGeeks</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="week-title">Week 8: Graphs (Advanced)</div>
+    <div class="day-item">
+        <div class="day-number">Day 50</div>
+        <div>
+            <h3>Topological Sort (DFS & BFS/Kahn’s Algo)</h3>
+            <p class="concept">Goal: Learn how to order nodes in a Directed Acyclic Graph (DAG).</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d50t1"> Course Schedule II: <a href="https://leetcode.com/problems/course-schedule-ii/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d50t2"> Topological Sort (GFG): <a href="https://practice.geeksforgeeks.org/problems/topological-sort/1" target="_blank">GeeksforGeeks</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 51</div>
+        <div>
+            <h3>Shortest Path in Graphs</h3>
+            <p class="concept">Goal: Understand Dijkstra’s Algorithm & BFS for unweighted graphs.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d51t1"> Network Delay Time: <a href="https://leetcode.com/problems/network-delay-time/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d51t2"> Shortest Path in Binary Matrix: <a href="https://leetcode.com/problems/shortest-path-in-binary-matrix/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 52</div>
+        <div>
+            <h3>Bellman-Ford and Negative Cycles</h3>
+            <p class="concept">Goal: Handle negative weights using Bellman-Ford.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d52t1"> Bellman Ford (GFG): <a href="https://practice.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/1" target="_blank">GeeksforGeeks</a></li>
+                <li><input type="checkbox" id="d52t2"> Negative Weight Cycle (GFG): <a href="https://practice.geeksforgeeks.org/problems/negative-weight-cycle3504/1" target="_blank">GeeksforGeeks</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 53</div>
+        <div>
+            <h3>Disjoint Set (Union Find) - Part 1</h3>
+            <p class="concept">Goal: Understand Union by Rank & Path Compression.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d53t1"> Number of Connected Components in an Undirected Graph: <a href="https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d53t2"> Disjoint Set Union (GFG): <a href="https://practice.geeksforgeeks.org/problems/disjoint-set-union-find/1" target="_blank">GeeksforGeeks</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 54</div>
+        <div>
+            <h3>Disjoint Set (Union Find) - Part 2</h3>
+            <p class="concept">Goal: Practice harder variations.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d54t1"> Redundant Connection: <a href="https://leetcode.com/problems/redundant-connection/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d54t2"> Accounts Merge: <a href="https://leetcode.com/problems/accounts-merge/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 55</div>
+        <div>
+            <h3>Minimum Spanning Tree (MST)</h3>
+            <p class="concept">Goal: Learn Kruskal’s and Prim’s algorithms.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d55t1"> Connecting Cities With Minimum Cost (GFG): <a href="https://practice.geeksforgeeks.org/problems/connecting-the-graph/1" target="_blank">GeeksforGeeks</a></li>
+                <li><input type="checkbox" id="d55t2"> Minimum Cost to Connect All Points: <a href="https://leetcode.com/problems/min-cost-to-connect-all-points/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 56</div>
+        <div>
+            <h3>Graph Recap + Practice</h3>
+            <p class="concept">Goal: Review concepts and revisit weak areas.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d56t1"> Practice 3 random graph problems from LeetCode’s Graph tag.</li>
+                <li><input type="checkbox" id="d56t2"> Review Graph Topic Revision Sheet.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="week-title">Week 9: Dynamic Programming I</div>
+    <div class="day-item">
+        <div class="day-number">Day 57</div>
+        <div>
+            <h3>Intro to DP + Fibonacci + Climbing Stairs</h3>
+            <p class="concept">Goal: Understand the recursion-to-DP transition.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d57t1"> Fibonacci Number: <a href="https://leetcode.com/problems/fibonacci-number/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d57t2"> Climbing Stairs: <a href="https://leetcode.com/problems/climbing-stairs/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 58</div>
+        <div>
+            <h3>0/1 Knapsack - Recursion + Memoization</h3>
+            <p class="concept">Goal: Learn base DP: choose/don’t choose item.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d58t1"> 0-1 Knapsack Problem (GFG): <a href="https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1" target="_blank">GeeksforGeeks</a></li>
+                <li><input type="checkbox" id="d58t2"> Subset Sum Problem: <a href="https://practice.geeksforgeeks.org/problems/subset-sum-problem2014/1" target="_blank">GeeksforGeeks</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 59</div>
+        <div>
+            <h3>0/1 Knapsack - Tabulation + Space Optimization</h3>
+            <p class="concept">Goal: Convert memoized version into bottom-up DP.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d59t1"> Equal Sum Partition: <a href="https://practice.geeksforgeeks.org/problems/partition-equal-subset-sum/0" target="_blank">GeeksforGeeks</a></li>
+                <li><input type="checkbox" id="d59t2"> Count of Subset Sum (GFG): <a href="https://practice.geeksforgeeks.org/problems/perfect-sum-problem5633/1" target="_blank">GeeksforGeeks</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 60</div>
+        <div>
+            <h3>Longest Common Subsequence (LCS)</h3>
+            <p class="concept">Goal: Intro to 2D DP problems.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d60t1"> Longest Common Subsequence: <a href="https://leetcode.com/problems/longest-common-subsequence/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d60t2"> Print LCS (GFG): <a href="https://www.geeksforgeeks.org/print-longest-common-subsequence/" target="_blank">GeeksforGeeks</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 61</div>
+        <div>
+            <h3>LCS Variants</h3>
+            <p class="concept">Goal: Tweak LCS logic for variations.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d61t1"> Longest Palindromic Subsequence: <a href="https://leetcode.com/problems/longest-palindromic-subsequence/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d61t2"> Shortest Common Supersequence: <a href="https://leetcode.com/problems/shortest-common-supersequence/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 62</div>
+        <div>
+            <h3>Longest Increasing Subsequence (LIS)</h3>
+            <p class="concept">Goal: Classic 1D DP with O(n²) and O(n log n) solutions.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d62t1"> Longest Increasing Subsequence: <a href="https://leetcode.com/problems/longest-increasing-subsequence/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d62t2"> Russian Doll Envelopes: <a href="https://leetcode.com/problems/russian-doll-envelopes/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 63</div>
+        <div>
+            <h3>DP Recap + Practice</h3>
+            <p class="concept">Goal: Practice all types: 1D, 2D, knapsack, LCS, LIS.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d63t1"> Review Striver's DP Playlist.</li>
+                <li><input type="checkbox" id="d63t2"> Practice random problems from LeetCode DP tag.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="week-title">Week 10: Advanced DP</div>
+    <div class="day-item">
+        <div class="day-number">Day 64</div>
+        <div>
+            <h3>DP on Grids — Basics</h3>
+            <p class="concept">Goal: Learn to move through grids using DP.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d64t1"> Unique Paths: <a href="https://leetcode.com/problems/unique-paths/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d64t2"> Minimum Path Sum: <a href="https://leetcode.com/problems/minimum-path-sum/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 65</div>
+        <div>
+            <h3>DP on Grids — Obstacles</h3>
+            <p class="concept">Goal: Add edge cases to grid DP.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d65t1"> Unique Paths II (Obstacles): <a href="https://leetcode.com/problems/unique-paths-ii/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d65t2"> Cherry Pickup II: <a href="https://leetcode.com/problems/cherry-pickup-ii/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 66</div>
+        <div>
+            <h3>DP on Trees — Basics</h3>
+            <p class="concept">Goal: Solve problems with recursive DFS + memo.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d66t1"> House Robber III: <a href="https://leetcode.com/problems/house-robber-iii/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d66t2"> Diameter of Binary Tree: <a href="https://leetcode.com/problems/diameter-of-binary-tree/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 67</div>
+        <div>
+            <h3>DP on Trees — Practice</h3>
+            <p class="concept">Goal: Master tree-based recursion.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d67t1"> Binary Tree Cameras: <a href="https://leetcode.com/problems/binary-tree-cameras/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d67t2"> Longest ZigZag Path in a Binary Tree: <a href="https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 68</div>
+        <div>
+            <h3>MCM — Matrix Chain Multiplication Intro</h3>
+            <p class="concept">Goal: Understand the MCM base pattern.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d68t1"> Matrix Chain Multiplication (GFG): <a href="https://www.geeksforgeeks.org/matrix-chain-multiplication-dp-8/" target="_blank">GeeksforGeeks</a></li>
+                <li><input type="checkbox" id="d68t2"> Burst Balloons: <a href="https://leetcode.com/problems/burst-balloons/" target="_blank">LeetCode</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 69</div>
+        <div>
+            <h3>MCM Variants</h3>
+            <p class="concept">Goal: Apply MCM pattern to other partition problems.</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d69t1"> Palindrome Partitioning II: <a href="https://leetcode.com/problems/palindrome-partitioning-ii/" target="_blank">LeetCode</a></li>
+                <li><input type="checkbox" id="d69t2"> Boolean Parenthesization (GFG): <a href="https://www.geeksforgeeks.org/boolean-parenthesization-problem-dp-37/" target="_blank">GeeksforGeeks</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="day-item">
+        <div class="day-number">Day 70</div>
+        <div>
+            <h3>DP Grand Finale Practice</h3>
+            <p class="concept">Goal: Revise grids + trees + MCM together!</p>
+            <ul class="task-list">
+                <li><input type="checkbox" id="d70t1"> Practice problems from LeetCode DP tag.</li>
+                <li><input type="checkbox" id="d70t2"> Review DP on Trees GFG Set.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Assign a unique ID to each checkbox to save its state
+        document.querySelectorAll('input[type="checkbox"]').forEach((checkbox, index) => {
+            checkbox.id = `checkbox-${index}`;
+        });
+
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const localStorageKey = 'dsaRoadmapCheckboxes';
+
+        // Function to save the state of all checkboxes to localStorage
+        const saveState = () => {
+            const state = {};
+            checkboxes.forEach(checkbox => {
+                state[checkbox.id] = checkbox.checked;
+            });
+            localStorage.setItem(localStorageKey, JSON.stringify(state));
+        };
+
+        // Function to load the state of all checkboxes from localStorage
+        const loadState = () => {
+            const savedState = localStorage.getItem(localStorageKey);
+            if (savedState) {
+                const state = JSON.parse(savedState);
+                checkboxes.forEach(checkbox => {
+                    if (state[checkbox.id] !== undefined) {
+                        checkbox.checked = state[checkbox.id];
+                    }
+                });
+            }
+        };
+
+        // Add event listeners to each checkbox
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', saveState);
+        });
+
+        // Load the saved state when the page loads
+        loadState();
+    });
+</script>
+
+</body>
+</html>
